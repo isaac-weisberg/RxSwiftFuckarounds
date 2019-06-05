@@ -12,6 +12,10 @@
 		FABB83C422A7B4430044A7D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABB83C222A7B4430044A7D1 /* Main.storyboard */; };
 		FABB83C622A7B4450044A7D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABB83C522A7B4450044A7D1 /* Assets.xcassets */; };
 		FABB83C922A7B4450044A7D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABB83C722A7B4450044A7D1 /* LaunchScreen.storyboard */; };
+		FABB83D422A7B54F0044A7D1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB83D222A7B54F0044A7D1 /* RxSwift.framework */; };
+		FABB83D522A7B54F0044A7D1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB83D322A7B54F0044A7D1 /* RxCocoa.framework */; };
+		FABB83D722A7B55A0044A7D1 /* FileDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB83D622A7B55A0044A7D1 /* FileDownloaderService.swift */; };
+		FABB83D922A7B6130044A7D1 /* JSONDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABB83D822A7B6130044A7D1 /* JSONDownloaderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		FABB83C522A7B4450044A7D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABB83C822A7B4450044A7D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABB83CA22A7B4450044A7D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABB83D222A7B54F0044A7D1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		FABB83D322A7B54F0044A7D1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		FABB83D622A7B55A0044A7D1 /* FileDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloaderService.swift; sourceTree = "<group>"; };
+		FABB83D822A7B6130044A7D1 /* JSONDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloaderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABB83D422A7B54F0044A7D1 /* RxSwift.framework in Frameworks */,
+				FABB83D522A7B54F0044A7D1 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				FABB83BD22A7B4430044A7D1 /* RxSwiftFuckarounds */,
 				FABB83BC22A7B4430044A7D1 /* Products */,
+				FABB83D122A7B54F0044A7D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +65,7 @@
 		FABB83BD22A7B4430044A7D1 /* RxSwiftFuckarounds */ = {
 			isa = PBXGroup;
 			children = (
+				FABB83D022A7B5340044A7D1 /* Services */,
 				FABB83BE22A7B4430044A7D1 /* AppDelegate.swift */,
 				FABB83C022A7B4430044A7D1 /* ViewController.swift */,
 				FABB83C222A7B4430044A7D1 /* Main.storyboard */,
@@ -62,6 +74,24 @@
 				FABB83CA22A7B4450044A7D1 /* Info.plist */,
 			);
 			path = RxSwiftFuckarounds;
+			sourceTree = "<group>";
+		};
+		FABB83D022A7B5340044A7D1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FABB83D622A7B55A0044A7D1 /* FileDownloaderService.swift */,
+				FABB83D822A7B6130044A7D1 /* JSONDownloaderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FABB83D122A7B54F0044A7D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FABB83D322A7B54F0044A7D1 /* RxCocoa.framework */,
+				FABB83D222A7B54F0044A7D1 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABB83D922A7B6130044A7D1 /* JSONDownloaderService.swift in Sources */,
 				FABB83C122A7B4430044A7D1 /* ViewController.swift in Sources */,
 				FABB83BF22A7B4430044A7D1 /* AppDelegate.swift in Sources */,
+				FABB83D722A7B55A0044A7D1 /* FileDownloaderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +315,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSwiftFuckarounds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -301,6 +337,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSwiftFuckarounds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
